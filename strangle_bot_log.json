@@ -1,0 +1,1451 @@
+[
+    {
+        "event": "time",
+        "india_time": "26-12-2025 11:15:26 AM"
+    },
+    {
+        "event": "day",
+        "day": "Friday"
+    },
+    {
+        "event": "connection",
+        "status": "Connected to FlatTrade_Server"
+    },
+    {
+        "event": "mode",
+        "mode": "PAPER MODE"
+    },
+    {
+        "event": "targets",
+        "target_points": 100,
+        "stoploss_points": 70
+    },
+    {
+        "event": "bot_started",
+        "name": "STRANGLE BOT STARTED"
+    },
+    {
+        "event": "exit_info",
+        "info": "Exit \u0c1a\u0c47\u0c2f\u0c3e\u0c32\u0c02\u0c1f\u0c47 Ctrl + C"
+    },
+    {
+        "event": "timestamp",
+        "time": "11:15:33"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY FUT",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "49508",
+                    "tsym": "BANKNIFTY30DEC25F",
+                    "dname": "BANKNIFTY DEC FUT",
+                    "optt": "XX",
+                    "instname": "FUTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.20"
+                },
+                {
+                    "exch": "NFO",
+                    "token": "49224",
+                    "tsym": "BANKNIFTY27JAN26F",
+                    "dname": "BANKNIFTY JAN FUT",
+                    "optt": "XX",
+                    "instname": "FUTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "27-JAN-2026",
+                    "pp": "2",
+                    "ls": "30",
+                    "ti": "0.20"
+                },
+                {
+                    "exch": "NFO",
+                    "token": "59175",
+                    "tsym": "BANKNIFTY24FEB26F",
+                    "dname": "BANKNIFTY FEB FUT",
+                    "optt": "XX",
+                    "instname": "FUTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "24-FEB-2026",
+                    "pp": "2",
+                    "ls": "30",
+                    "ti": "0.20"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "placing_order",
+        "leg": "CE",
+        "symbol": "BANKNIFTY30DEC25C59100"
+    },
+    {
+        "event": "paper_trade",
+        "side": "S",
+        "symbol": "BANKNIFTY30DEC25C59100"
+    },
+    {
+        "event": "placing_order",
+        "leg": "PE",
+        "symbol": "BANKNIFTY30DEC25P59100"
+    },
+    {
+        "event": "paper_trade",
+        "side": "S",
+        "symbol": "BANKNIFTY30DEC25P59100"
+    },
+    {
+        "event": "entry_done",
+        "ce_sym": "BANKNIFTY30DEC25C59100",
+        "entry_ce": 195.55,
+        "pe_sym": "BANKNIFTY30DEC25P59100",
+        "entry_pe": 166.5
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 40.5,
+        "pe_pnl": -30.0,
+        "total_pnl": 10.5
+    },
+    {
+        "event": "timestamp",
+        "time": "11:16:02"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 45.0,
+        "pe_pnl": -21.75,
+        "total_pnl": 23.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:16:13"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 28.5,
+        "pe_pnl": -23.25,
+        "total_pnl": 5.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:16:23"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 49.5,
+        "pe_pnl": -12.0,
+        "total_pnl": 37.5
+    },
+    {
+        "event": "timestamp",
+        "time": "11:16:34"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 40.5,
+        "pe_pnl": -3.75,
+        "total_pnl": 36.75
+    },
+    {
+        "event": "timestamp",
+        "time": "11:16:48"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 105.0,
+        "pe_pnl": -57.0,
+        "total_pnl": 48.0
+    },
+    {
+        "event": "timestamp",
+        "time": "11:17:05"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 158.25,
+        "pe_pnl": -72.0,
+        "total_pnl": 86.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:17:19"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 172.5,
+        "pe_pnl": -59.25,
+        "total_pnl": 113.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:17:32"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 108.0,
+        "pe_pnl": -42.75,
+        "total_pnl": 65.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:17:46"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 79.5,
+        "pe_pnl": -40.5,
+        "total_pnl": 39.0
+    },
+    {
+        "event": "timestamp",
+        "time": "11:17:57"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 105.75,
+        "pe_pnl": -64.5,
+        "total_pnl": 41.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:18:09"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 84.75,
+        "pe_pnl": -33.75,
+        "total_pnl": 51.0
+    },
+    {
+        "event": "timestamp",
+        "time": "11:18:21"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 69.0,
+        "pe_pnl": -20.25,
+        "total_pnl": 48.75
+    },
+    {
+        "event": "timestamp",
+        "time": "11:18:32"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 84.0,
+        "pe_pnl": -31.5,
+        "total_pnl": 52.5
+    },
+    {
+        "event": "timestamp",
+        "time": "11:18:45"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 83.25,
+        "pe_pnl": -33.0,
+        "total_pnl": 50.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:18:58"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 86.25,
+        "pe_pnl": -37.5,
+        "total_pnl": 48.75
+    },
+    {
+        "event": "timestamp",
+        "time": "11:19:11"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 75.0,
+        "pe_pnl": -13.5,
+        "total_pnl": 61.5
+    },
+    {
+        "event": "timestamp",
+        "time": "11:19:24"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 80.25,
+        "pe_pnl": -38.25,
+        "total_pnl": 42.0
+    },
+    {
+        "event": "timestamp",
+        "time": "11:19:36"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 97.5,
+        "pe_pnl": -51.75,
+        "total_pnl": 45.75
+    },
+    {
+        "event": "timestamp",
+        "time": "11:19:47"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 125.25,
+        "pe_pnl": -88.5,
+        "total_pnl": 36.75
+    },
+    {
+        "event": "timestamp",
+        "time": "11:19:58"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 143.25,
+        "pe_pnl": -84.75,
+        "total_pnl": 58.5
+    },
+    {
+        "event": "timestamp",
+        "time": "11:20:09"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 138.0,
+        "pe_pnl": -75.75,
+        "total_pnl": 62.25
+    },
+    {
+        "event": "timestamp",
+        "time": "11:20:23"
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25C59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51416",
+                    "tsym": "BANKNIFTY30DEC25C59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 CE ",
+                    "optt": "CE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "search_result",
+        "for": "BANKNIFTY30DEC25P59100",
+        "result": {
+            "stat": "Ok",
+            "values": [
+                {
+                    "exch": "NFO",
+                    "token": "51417",
+                    "tsym": "BANKNIFTY30DEC25P59100",
+                    "dname": "BANKNIFTY 30DEC25 59100 PE ",
+                    "optt": "PE",
+                    "instname": "OPTIDX",
+                    "symname": "BANKNIFTY",
+                    "seg": "DER",
+                    "exd": "30-DEC-2025",
+                    "pp": "2",
+                    "ls": "35",
+                    "ti": "0.05"
+                }
+            ]
+        }
+    },
+    {
+        "event": "pnl",
+        "ce_pnl": 159.0,
+        "pe_pnl": -75.75,
+        "total_pnl": 83.25
+    },
+    {
+        "event": "interrupt",
+        "message": "Ctrl + C detected"
+    },
+    {
+        "event": "bot_stopped",
+        "message": "STRANGLE BOT STOPPED SAFELY"
+    }
+]
