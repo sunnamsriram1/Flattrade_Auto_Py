@@ -44,6 +44,11 @@
 ### 🔹 Python Packages
 ```bash
 pip install requests pyotp pytz
+pip install NorenRestApiPy
+pip install requests
+pip install hashlib
+pip install pyotp
+pip install pytz
 ```
 
 ---
