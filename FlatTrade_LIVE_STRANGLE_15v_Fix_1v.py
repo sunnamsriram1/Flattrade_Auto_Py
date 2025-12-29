@@ -1,21 +1,24 @@
+
 from NorenRestApiPy.NorenApi import NorenApi
 import requests, hashlib, time, os, json
 from datetime import datetime, time as dtime, date, timedelta
 import pytz
+import signal
+import sys
 
 os.system("clear")
 
 # ================= CONFIG =================
-USER_ID = "FZXX3X8"
-PASSWORD = "AXXeXXXX"
-API_KEY = "0eXXXXXXXXXX20c1ec552XXXXXXXXXXbec2e"
-API_SECRET = "2025.03XXXXXXXX56aadcaecbdaXXXXXXXXX60d1b722ebbc3"
+USER_ID = "FZ3XXX1X"
+PASSWORD = "ABXXXJX"
+API_KEY = "0eb3fXXXXXX443aad2XXX0c1ecXXXXXXX552bec2e"
+API_SECRET = "2025.0XXXXXXXXXf4924aXXXX65cf9056aaXXXXXXXX1b722ebbc3"
 
 SYMBOL = "BANKNIFTY"
 STRIKE_STEP = 100
 QTY = 15
 
-PAPER = True      # True for paper, False for live
+PAPER = True      # True for paper, False for Live
 ENTRY_TIME = dtime(9, 20)
 
 TARGET_POINTS = 100
@@ -24,15 +27,18 @@ STOPLOSS_POINTS = 70
 TOKEN_FILE = "flattrade_token.json"
 LOG_FILE = "strangle_bot_log.json"
 
-TELEGRAM_BOT_TOKEN = "855XXX81XX37:AAGXXXXXXXXiA58ZYyLXXXXXXIoZdi9eqrI"  # Replace with your token
-TELEGRAM_CHAT_ID = "57XXX475XXXX129"      # Replace with your chat ID
+TELEGRAM_BOT_TOKEN = "8559748137:AAXXXXXX06z-ChXXXXXXXXXLIoZdi9eqrI"
+TELEGRAM_CHAT_ID = "57XXXXXX51XX29"
 # =========================================
 
-logs = []  # Global list to collect all events for saving
+# ANSI Colors
+RED_BOLD = "\033[1;31m"
+GREEN_BOLD = "\033[1;32m"
+RESET = "\033[0m"
+
+logs = []
 
 def send_telegram_message(message):
-    if TELEGRAM_BOT_TOKEN == "your_telegram_bot_token_here" or TELEGRAM_CHAT_ID == "your_telegram_chat_id_here":
-        return  # Skip if not configured
     try:
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
         payload = {
@@ -54,29 +60,58 @@ class FT(NorenApi):
 # ================= TOKEN =================
 def load_token():
     if os.path.exists(TOKEN_FILE):
-        d = json.load(open(TOKEN_FILE))
-        if d.get("date") == str(date.today()):
-            return d["token"]
+        try:
+            d = json.load(open(TOKEN_FILE))
+            if d.get("date") == str(date.today()):
+                return d["token"]
+        except:
+            pass
     return None
 
 def generate_token():
-    print("🔐 LOGIN:", f"https://auth.flattrade.in/?app_key={API_KEY}")
-    rc = input("Paste request_code: ").strip()
+    now = datetime.now(pytz.timezone("Asia/Kolkata"))
+    time_str = f"🕒 India Time : {now.strftime('%d-%m-%Y %I:%M:%S %p')}"
+    print(time_str)
+    day_str = f"📅 Day        : {now.strftime('%A')}"
+    print(day_str)
+
+    print("\n🔐 LOGIN:", f"https://auth.flattrade.in/?app_key={API_KEY}")
+    try:
+        rc = input("\n\nPaste request_code: ").strip()
+    except (EOFError, KeyboardInterrupt):
+        print("\n\n⚠️ Input cancelled. Bot stopping safely...")
+        sys.exit(0)
+
+    if not rc:
+        print("❌ Empty request_code. Bot stopped.")
+        sys.exit(0)
+
     h = hashlib.sha256((API_KEY + rc + API_SECRET).encode()).hexdigest()
 
-    r = requests.post(
-        "https://authapi.flattrade.in/trade/apitoken",
-        json={
-            "api_key": API_KEY,
-            "request_code": rc,
-            "api_secret": h
-        }
-    ).json()
+    try:
+        r = requests.post(
+            "https://authapi.flattrade.in/trade/apitoken",
+            json={
+                "api_key": API_KEY,
+                "request_code": rc,
+                "api_secret": h
+            },
+            timeout=30
+        ).json()
 
-    token = r["token"]
-    json.dump({"token": token, "date": str(date.today())}, open(TOKEN_FILE, "w"))
-    return token
-
+        if r.get("stat") == "Ok":
+            token = r["token"]
+            json.dump({"token": token, "date": str(date.today())}, open(TOKEN_FILE, "w"))
+            print("✅ Login Successful! Token saved for today.")
+            send_telegram_message("✅ Login Successful! Bot ready.")
+            return token
+        else:
+            print(f"❌ Login Failed: {r.get('emsg', 'Unknown error')}")
+            send_telegram_message(f"❌ Login Failed: {r.get('emsg', 'Unknown error')}")
+            sys.exit(0)
+    except Exception as e:
+        print(f"🌐 Network Error during login: {str(e)}")
+        sys.exit(0)
 
 def connect():
     api = FT()
@@ -84,33 +119,30 @@ def connect():
     api.set_session(USER_ID, PASSWORD, token)
 
     now = datetime.now(pytz.timezone("Asia/Kolkata"))
-    
-    # First beautiful prints
-    time_str = f"🕒 India Time : {now.strftime('%d-%m-%Y %I:%M:%S %p')}"
-    print(time_str)
-    day_str = f"📅 Day        : {now.strftime('%A')}"
-    print(day_str)
-    conn_str = "✅ Connected to FlatTrade_Server"
-    print(conn_str)
-    mode_str = "🔥 LIVE MODE — REAL MONEY" if not PAPER else "🧪 PAPER MODE"
-    print(mode_str)
-    target_str = f"🎯 TARGET: {TARGET_POINTS} pts | 🛑 SL: {STOPLOSS_POINTS} pts"
-    print(target_str)
+
+    print(f"🕒 India Time : {now.strftime('%d-%m-%Y %I:%M:%S %p')}")
+    print(f"📅 Day        : {now.strftime('%A')}")
+    print("✅ Connected to FlatTrade_Server")
+    print("🧪 PAPER MODE" if PAPER else "🔥 LIVE MODE — REAL MONEY")
+    print(f"🎯 TARGET: {TARGET_POINTS} pts | 🛑 SL: {STOPLOSS_POINTS} pts")
     print()
-    bot_start_str = "🚀 STRANGLE BOT STARTED"
-    print(bot_start_str)
-    exit_info_str = "ℹ️ Exit చేయాలంటే Ctrl + C"
-    print(exit_info_str)
-    
-    # Send initial to Telegram
-    initial_message = f"{time_str}\n{day_str}\n{conn_str}\n{mode_str}\n{target_str}\n\n{bot_start_str}\n{exit_info_str}"
+    print("🚀 STRANGLE BOT STARTED")
+    print("ℹ️ Exit Try Do HiT Ctrl + C")
+
+    initial_message = (
+        f"🕒 <b>{now.strftime('%d-%m-%Y %I:%M:%S %p')}</b>\n"
+        f"📅 <b>{now.strftime('%A')}</b>\n"
+        "✅ Connected\n"
+        f"{'🧪 PAPER MODE' if PAPER else '🔥 LIVE MODE'}\n"
+        f"🎯 TARGET: {TARGET_POINTS} pts | 🛑 SL: {STOPLOSS_POINTS} pts\n\n"
+        "🚀 <b>STRANGLE BOT STARTED</b>"
+    )
     send_telegram_message(initial_message)
-    
-    # Save to logs
+
     logs.append({"event": "time", "india_time": now.strftime("%d-%m-%Y %I:%M:%S %p")})
     logs.append({"event": "day", "day": now.strftime("%A")})
     logs.append({"event": "connection", "status": "Connected to FlatTrade_Server"})
-    logs.append({"event": "mode", "mode": "LIVE MODE — REAL MONEY" if not PAPER else "PAPER MODE"})
+    logs.append({"event": "mode", "mode": "PAPER MODE" if PAPER else "LIVE MODE — REAL MONEY"})
     logs.append({"event": "targets", "target_points": TARGET_POINTS, "stoploss_points": STOPLOSS_POINTS})
     logs.append({"event": "bot_started", "name": "STRANGLE BOT STARTED"})
     logs.append({"event": "exit_info", "info": "Exit చేయాలంటే Ctrl + C"})
@@ -119,14 +151,10 @@ def connect():
 
 api = connect()
 
-
-
-import time
-time.sleep(5)
-
 # ================= UTILITIES =================
 def market_open():
-    return dtime(9,15) <= datetime.now().time() <= dtime(15,30)
+    current_time = datetime.now().time()
+    return dtime(9, 15) <= current_time <= dtime(15, 30)
 
 def get_nearest_expiry():
     today = date.today()
@@ -135,13 +163,16 @@ def get_nearest_expiry():
     else:
         next_month_first = date(today.year, today.month + 1, 1)
     last_day = next_month_first - timedelta(days=1)
-    days_back = (last_day.weekday() - 1) % 7  # 1 = Tuesday
+    days_back = (last_day.weekday() - 1) % 7
     expiry = last_day - timedelta(days=days_back)
-    return expiry.strftime("%d%b%y").upper()  # 30DEC25
+    return expiry.strftime("%d%b%y").upper()
 
 def search_token(search_text):
-    r = api.searchscrip(exchange="NFO", searchtext=search_text)
-    data = {"event": "search_result", "for": search_text, "result": r}
+    try:
+        r = api.searchscrip(exchange="NFO", searchtext=search_text)
+    except:
+        return None
+    data = {"event": "search_result", "for": search_text, "result": r if 'r' in locals() else {"stat": "Error"}}
     logs.append(data)
     json_str = json.dumps(data, indent=4)
     print(json_str)
@@ -157,8 +188,7 @@ def get_ltp(search_text):
     q = api.get_quotes(exchange="NFO", token=token)
     if q and "lp" in q:
         return float(q["lp"])
-    else:
-        raise Exception(f"No LTP data for {search_text}")
+    raise Exception(f"No LTP data for {search_text}")
 
 def fut_ltp():
     return get_ltp("BANKNIFTY FUT")
@@ -220,10 +250,11 @@ exp = ""
 
 def enter_trade():
     global trade_done, ce_sym, pe_sym, entry_ce, entry_pe, exp
+    if trade_done:
+        return
 
     exp = get_nearest_expiry()
     atm = atm_strike()
-
     ce_sym = f"{SYMBOL}{exp}C{atm}"
     pe_sym = f"{SYMBOL}{exp}P{atm}"
 
@@ -276,17 +307,9 @@ def monitor_trade():
         exit_trade("STOPLOSS HIT", total_pnl)
 
 def exit_trade(reason, pnl):
-    placing_ce_exit = {"event": "placing_order", "leg": "CE EXIT", "symbol": ce_sym}
-    logs.append(placing_ce_exit)
-    print(json.dumps(placing_ce_exit, indent=4))
-    send_telegram_message(json.dumps(placing_ce_exit, indent=4))
-    place(ce_sym, "B")
-
-    placing_pe_exit = {"event": "placing_order", "leg": "PE EXIT", "symbol": pe_sym}
-    logs.append(placing_pe_exit)
-    print(json.dumps(placing_pe_exit, indent=4))
-    send_telegram_message(json.dumps(placing_pe_exit, indent=4))
-    place(pe_sym, "B")
+    if trade_done:
+        place(ce_sym, "B")
+        place(pe_sym, "B")
 
     exit_data = {
         "event": "exit",
@@ -296,21 +319,69 @@ def exit_trade(reason, pnl):
     logs.append(exit_data)
     print(json.dumps(exit_data, indent=4))
     send_telegram_message(json.dumps(exit_data, indent=4))
-    exit()
+    sys.exit(0)
+
+# ================= SAFE SHUTDOWN =================
+def signal_handler(sig, frame):
+    print("\n\n🛑 Graceful Shutdown Initiated...")
+    int_data = {"event": "interrupt", "message": "Ctrl + C detected"}
+    logs.append(int_data)
+    print(json.dumps(int_data, indent=4))
+
+    stop_data = {"event": "bot_stopped", "message": "STRANGLE BOT STOPPED SAFELY"}
+    logs.append(stop_data)
+    print(json.dumps(stop_data, indent=4))
+
+    with open(LOG_FILE, "w") as f:
+        json.dump(logs, f, indent=4)
+
+    print(f"\n{GREEN_BOLD}📁 All Logs Saved to {LOG_FILE}{RESET}\n")
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
 
 # ================= MAIN LOOP =================
+market_closed_message_shown = False
+
 try:
     while True:
         try:
             now = datetime.now()
-            ts_data = {"event": "timestamp", "time": now.strftime("%H:%M:%S")}
+            current_time_str = now.strftime("%H:%M:%S")
+            ts_data = {"event": "timestamp", "time": current_time_str}
             logs.append(ts_data)
             print(json.dumps(ts_data, indent=4))
             send_telegram_message(json.dumps(ts_data, indent=4))
 
             if not market_open():
+                if not market_closed_message_shown:
+                    closed_msg = f"{RED_BOLD}⏳ Market Closed - Waiting for Market Open (9:15 AM - 3:30 PM){RESET}"
+                    print(closed_msg)
+
+                    waiting_data = {
+                        "event": "market_status",
+                        "display": "RED_BOLD",
+                        "status": "Closed - Bot Will Resume at Market Open"
+                    }
+                    logs.append(waiting_data)
+
+                    green_json = f"{RED_BOLD}{json.dumps(waiting_data, indent=4)}{RESET}"
+                    print(green_json)
+
+                    send_telegram_message("<b>⏳ Market Closed</b>\nBot waiting for next market open")
+                    market_closed_message_shown = True
                 time.sleep(30)
                 continue
+            else:
+                if market_closed_message_shown:
+                    open_msg = "🟢 Market Opened - Bot Resumed!"
+                    print(open_msg)
+                    resumed_data = {"event": "market_status", "status": "Open - Bot resumed"}
+                    logs.append(resumed_data)
+                    print(json.dumps(resumed_data, indent=4))
+                    send_telegram_message(open_msg)
+                    market_closed_message_shown = False
 
             if now.time() >= ENTRY_TIME and not trade_done:
                 enter_trade()
@@ -327,19 +398,9 @@ try:
             send_telegram_message(json.dumps(err_data, indent=4))
             time.sleep(5)
 
-except KeyboardInterrupt:
-    int_data = {"event": "interrupt", "message": "Ctrl + C detected"}
-    logs.append(int_data)
-    print(json.dumps(int_data, indent=4))
-    # No send here to avoid hang
-
-    stop_data = {"event": "bot_stopped", "message": "STRANGLE BOT STOPPED SAFELY"}
-    logs.append(stop_data)
-    print(json.dumps(stop_data, indent=4))
-    # No send here to avoid hang
-
-    # Final save to file
+except Exception as e:
+    # Final fallback
+    print(f"\n🔴 Unexpected error: {str(e)}")
     with open(LOG_FILE, "w") as f:
         json.dump(logs, f, indent=4)
-
-    print(f"\n📁 All logs saved to {LOG_FILE}")
+    sys.exit(1)
