@@ -1,0 +1,5 @@
+pip install NorenRestApiPy
+pip install requests
+pip install hashlib
+pip install pyotp
+pip install pytz
